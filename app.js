@@ -11,7 +11,6 @@ app.use(express.static(path.join(__dirname, 'bower_components')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// app.listen(3000);
 server.listen(3000);
 
 app.get('/', function(req, res, next) {
