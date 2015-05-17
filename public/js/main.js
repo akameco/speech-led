@@ -1,10 +1,11 @@
-var onButton = document.getElementById('on');
-var offButton = document.getElementById('off');
+var socket = io();
 
+var onButton = document.getElementById('on');
 onButton.addEventListener('click',function(){
-  fetch('/on');
+  socket.emit('led', 'on');
 });
 
+var offButton = document.getElementById('off');
 offButton.addEventListener('click',function(){
-  fetch('/off');
+  socket.emit('led', 'off');
 });
