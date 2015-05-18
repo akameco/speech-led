@@ -23,17 +23,7 @@ var led;
 
 board.on('ready', function() {
   led = new five.Led(13);
-  console.log('board is ready');  
-});
-
-app.get('/on', function(req, res, next) {
-  if(board.isReady){ led.on(); }
-  console.log('on');
-});
-
-app.get('/off', function(req, res, next) {
-  if(board.isReady){ led.off(); }
-  console.log('off');
+  console.log('board is ready');
 });
 
 io.on('connection', function (socket) {
